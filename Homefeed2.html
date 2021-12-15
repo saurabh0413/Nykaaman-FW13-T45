@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(243,243,243);
+        }
+        #content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #content>div,h3{
+            margin-top: 3%;
+        }
+        #brandsgrid{
+            display: grid;
+            
+            grid-template-columns: repeat(2,49%);
+            grid-gap:2%;
+            margin-bottom: 7%;   
+
+        }
+        
+        .imagewrap img{
+            width: 100%;
+            height: 100%;
+        } 
+        #topcat {
+            display: grid;
+            grid-template-columns: repeat(4,24%);
+            /* grid-template-rows: repeat(2,100px); */
+            grid-gap: 10px;
+            /* background-color: bisque;    */
+            justify-content: space-evenly;
+            
+            /* width: 80%;  */
+
+        }
+        .types{
+            background-color: white;
+            width: 290px;
+            border: 0.5px solid lightgray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: aqua; */
+            /* padding-left: 3%; */
+        }
+        .types h3{
+            margin-left: 10px;
+        }
+        .types i{
+            margin-right: 10px;
+        }
+        .onhover:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+        }
+        .banner:hover{
+            box-shadow: 5px 5px 2px 2px lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+        <!-- First Banner -->
+        <div class="banner">
+            <img src="https://images-static.nykaa.com/uploads/607469d0-c985-4056-a0e5-9c807e874c8b.jpg?tr=w-1200,cm-pad_resize"/>
+        </div>
+
+        <!-- Static -->
+        <div id="perfume" class="onhover">
+            <img src="https://images-static.nykaa.com/uploads/0efd05c8-05a2-416f-9ae8-bff18964d675.jpg?tr=w-1200,cm-pad_resize"/>
+        </div>
+
+        <!-- Second Banner -->
+        <div class="banner">
+            <img src="https://images-static.nykaa.com/uploads/36b9438e-82b7-429e-b8f2-b7b9008d7a55.jpg?tr=w-1200,cm-pad_resize"/>
+        </div>
+
+        <!-- Top Brandes -->
+        <h2>Top Brands</h2>
+
+        <div id="brandsgrid">
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/c3512ed3-3557-4a25-8014-1c425748f79a.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/47b49202-ae60-4f23-b514-bb06721d9200.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/c9695026-ff78-4aa3-a8f6-a98dc8d83324.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/42e06b0a-477e-456f-9088-067b7746bf42.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/46a7a6bc-e11f-4664-b0dc-3301f168e52f.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/2bc69e04-34eb-4ec0-89ff-ea790a764227.png?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/94331730-2a8b-460b-a090-2738f7e6cf70.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+
+            <div class="imagewrap onhover">
+                <img src="https://images-static.nykaa.com/uploads/2abef5c8-dfb5-4dbb-aad9-894eb4c12bc1.jpg?tr=w-600,cm-pad_resize"/>
+            </div>
+        </div>
+
+
+        <h2>Top Categories</h2>
+        <!-- Top Categories grid -->
+        <div id="topcat">
+            <div class="types onhover">
+                <h3>Body Wash</h3>
+                <i>&#62;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Deodrants</h3>
+                <i>&#707;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Shampoos</h3>
+                <i>&#707;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Trimmers</h3>
+                <i>&#707;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Beard Oils</h3>
+                <i>&#707;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Facewashes</h3>
+                <i>&#707;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Razor & Cartidges</h3>
+                <i>&#707;</i>
+            </div>
+
+            <div class="types onhover">
+                <h3>Dental Care</h3>
+                <i>&#707;</i>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
+<script>
+</script>
