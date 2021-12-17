@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/336aa36eed.js" crossorigin="anonymous"></script>
+    <style>
+         body {
+        background-color: #f3f3f3;
+        font-family:"Source Sans Pro", Roboto, Arial, sans-serif;
+      }
+        #buyingGuidesContainer{
+            width: 75%;
+            height: 370px;
+            border: 1px solid transparent;
+            margin: auto;
+        }
+        .buyingGuides{
+            text-align: center;
+            display: inline-block;
+            margin-left: 40%;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            color: #3f414d;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        #viewAllDk{
+            margin-left: 35%;
+            display: inline-block;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;;
+            font-size: 16px;
+            line-height: 16px;
+            color: #fa5f8e;
+            
+        }
+        #arrowiconDK{
+            display: inline-block;
+            margin-left: 8px;
+            color: #fa5f8e;
+        }
+        #buyingGImgsDiv{
+            border: 1px solid transparent;
+            margin: auto;
+            width: 99%;
+            height: 290px;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            gap: 15px;
+        }
+        .buyingGImgs{
+            border-radius: 5px;
+            box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .buyingGImgs:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #NewAtNykaaContainer{
+            width: 75%;
+            height: 370px;
+            border: 1px solid transparent;
+            margin: auto;
+        }
+        #NewAtNykaaMAnImgDiv{
+            margin: auto;
+            width: 99%;
+            height: 290px;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            gap: 19px;
+        }
+
+        .NewAtNykaaImgsDk{
+            border-radius: 5px;
+            box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .NewAtNykaaImgsDk:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #ManBestFriendImgDiv{
+            height: 300px;
+            width: 35%;
+            border: 1px solid transparent;
+            margin: auto;
+            margin-top: 7%;
+        }
+        * {
+        box-sizing: border-box;
+      }
+      #sf3-Container {
+        /* border: 3px solid black; */
+        margin: auto;
+        overflow: hidden;
+        width: 83%;
+        height: 330px;
+        position: relative;
+      }
+      #sf3-Slider {
+        width: 1000%;
+        height: 100%;
+        list-style: none;
+        /* border: 3px solid red; */
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        transition: all 0.5s ease;
+      }
+
+      #sf3-Container .sf3-SliderBox {
+        height: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 0px 5px;
+        /* border: 2px solid mediumseagreen; */
+      }
+
+      .sf3-SliderBox:hover {
+        box-shadow: 0 0px 5px 5px rgb(0 0 0 / 22%);
+        border-radius: 3px;
+      }
+      #sf3-leftButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        left: 8px;
+      }
+      #sf3-rightButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        right: 8px;
+      }
+      #sf3-Container + h2{
+          color: black;
+          margin:20px auto  20px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: normal;
+      }
+        #GroomingAdvContainer{
+            width: 75%;
+            border: 1px solid transparent;
+            margin: auto;
+            margin-top: 0px;
+        }
+        #GroomingAdvImgsDiv{
+            border: 1px solid transparent;
+            margin: auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            gap: 12px;
+        }
+        .groomingAdvImgsC_div{
+            width: 95%;
+            height: fit-content;
+            border: 1px solid transparent;
+            box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .groomingAdvImgsC_div:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .groomingAdvPara{
+            text-align: center;
+            font-size: 16px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            line-height: 19px;
+            font-weight: 400;
+        }
+        #newLaunchesPara{
+            margin-top: 3%;
+            margin-left: 41%;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            color: #3f414d;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        #newLaunchesGImgsDiv{
+            /* margin-left: 1%; */
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 22%);
+            gap: 20px;
+            border: 1px solid transparent;
+        }
+        #NewLaunchesContainer{
+            width: 85%;
+            border: 1px solid transparent;
+            margin: auto;
+            margin-left: 10%;
+        }
+        .newLaunchImgs{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 3px;
+        }
+        .newLaunchImgs:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #newLaunchesGImgsDiv2{
+            border: 1px solid transparent;
+            margin-top: 3%;
+            width:fit-content;
+        }
+        #newLaunchesGImgsDiv3{
+            margin-top: 3%;
+        }
+        #footer_container1Dk{
+            border: 1px solid transparent;
+            height: 180px;
+            margin-top: 3%;
+            background-color: #1e6b7b;
+            display: flex;
+        }
+        .footer_contCdiv{
+            width: 31%;
+            height: 130px;
+            border: 1px solid transparent;
+            margin: auto;
+        }
+        .msgIconDk{
+            color: white;
+            display: inline-block;
+            margin-top: 8px;
+            position: absolute;
+        }
+        #msgIconPara{
+            color: white;
+            display: inline-block;
+            margin-left: 48px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            position: absolute;
+        }
+        #inputFooterDk{
+            background-color: #1e6b7b;
+            color: white;
+            height: 32px;
+            width: 45%;
+            margin-top: 59px;
+            border: none;
+           border-bottom: 1px solid white;
+           outline: none;
+        }
+        #inputFooterDk::placeholder{
+            color: white;
+            border: none;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            font-weight: 600;
+            line-height: 20px;
+            font-size: 14px;
+        }
+        #btnFooterDk{
+            margin-left: 1%;
+            height: 40px;
+            width: 65px;
+            color:white;
+            background-color: #1e6b7b;
+            border: 1px solid white;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 600;
+            border-radius: 3px;
+        }
+        #contactTimingDk{
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            color: white;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 15px;
+            margin-top: 7%;
+            margin-left: 7%;
+        }
+        #phnIconPara{
+            color: white;
+            font-size: 16px;
+            font-family:"Source Sans Pro", Roboto, Arial, sans-serif;
+            font-weight: 400;
+            line-height: 15px;
+            margin-left: 45px;
+            position: absolute;
+            margin-top: 7px;
+        }
+        #footer_container2Dk{
+            border: 1px solid transparent;
+            height: 295px;
+            background-color: #003243;
+            display: flex;
+            gap: 5px;
+        }
+        .footer_cDivuLDk{
+            width: 25%;
+            height: 280px;
+            border: 1px solid transparent;
+            margin-left: 1%;
+        }
+        .listParaDk{
+            font-family:"Source Sans Pro", Roboto, Arial, sans-serif; ;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 6%;
+        }
+        .list_para_hover:hover{
+            color: rgb(1, 105, 105);
+        }
+        #footer_container3Dk{
+            border: 1px solid transparent;
+            height: 290px;
+        }
+        #footer_containerCdiv{
+            width: 80%;
+            height: 280px;
+            margin: auto;
+            margin-left: 15%;
+            border: 1px solid transparent;
+            display: flex;
+            gap: 21%;
+        }
+        .freeShippingparaDk{
+            display: inline-block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+        }
+        .footerLAst2ndPara{
+            font-size: 14px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            font-weight: 400;
+            line-height: 20px;
+            margin-left: 21%;
+        }
+        .socialMediaPara{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+        }
+        .instaFbIcon{
+            color: #0e708f;
+            margin-left: 35%;
+        }
+        #footer_container4Dk{
+            height: 120px;
+            border: 1px solid transparent;
+            background-color: #003243;
+        }
+        #footer_containerCd4Dk{
+            border: 1px solid transparent;
+            width: 50%;
+            margin: auto;
+            height: 110px;
+        }
+        .footerMostParaDk{
+            display: inline-block;
+            color: white;
+            margin-left: 3%;
+            font-size: 14px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;;
+            font-weight: 400;
+            line-height: 14px;
+            margin-top: 3%;
+        }
+        #footerMostPara2Dk{
+            color: white;
+            margin-left: 24%;
+            margin-top: 4%;
+            font-size: 12px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        #SffourthSlider{
+            border: 1px solid transparent;
+            margin-top: 7%;
+            width: 92%;
+            margin-left: 5%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <!--BuyingGuides Section  -->
+
+     <div id="buyingGuidesContainer">
+        <p class="buyingGuides">BUYING GUIDES</p>
+        <p id="viewAllDk">VIEW ALL</p>
+        <i class="fas fa-chevron-right fa 3x" id="arrowiconDK"></i>
+        <div id="buyingGImgsDiv">
+            <img class="buyingGImgs"src="https://images-static.nykaa.com/uploads/49888e73-f584-4c54-b191-239cd234fba5.jpg?tr=w-400,cm-pad_resize" alt="img">
+            <img class="buyingGImgs"src="https://images-static.nykaa.com/uploads/5c9b7091-317f-4e34-a155-9b4489c8c97f.jpg?tr=w-400,cm-pad_resize" alt="img">
+            <img class="buyingGImgs"src="https://images-static.nykaa.com/uploads/4d0ff022-1097-4807-ad31-f4caad685a60.png?tr=w-400,cm-pad_resize" alt="img">
+        </div>
+     </div>
+
+     <!-- NEW AT NYKAA MAN Section -->
+
+     <div id="NewAtNykaaContainer">
+        <p class="buyingGuides">NEW AT NYKAA MAN</p>
+        <div id="NewAtNykaaMAnImgDiv">
+            <img class="NewAtNykaaImgsDk"src="https://images-static.nykaa.com/uploads/6ee7a8f0-4def-42c5-9375-22ac42bfeeab.jpg?tr=w-600,cm-pad_resize" alt="img">
+            <img class="NewAtNykaaImgsDk"src="https://images-static.nykaa.com/uploads/700787c8-bdf5-4693-bec9-5edc73f3945b.jpg?tr=w-600,cm-pad_resize" alt="img">
+        </div>
+     </div>
+
+  <!-- Man's Best Friend IMAGE Section -->
+
+     <div id="ManBestFriendImgDiv">
+         <br>
+        <img class="NewAtNykaaImgsDk"src="https://images-static.nykaa.com/uploads/c0265676-aff6-42f1-8068-fc78e0073797.jpg?tr=w-600,cm-pad_resize" alt="img">
+     </div>
+
+     <!-- KITS & COMBOS SECTION -->
+
+
+
+     <div id="SffourthSlider">
+
+        <p class="buyingGuides">KITS & COMBOS</p>
+
+        <!--main container of slider 1-->
+        <div id="sf3-Container">
+          <!--inside container sliding -->
+          <div id="sf3-Slider">
+            <!--slider box1-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/8b3eacd2-b156-467c-9c0f-0abbe94b58f9.jpg?tr=w-200,cm-pad_resize"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!--slider box2-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/f2777534-16c5-42b0-a3a8-cf8071484f15.jpg?tr=w-200,cm-pad_resize"
+                  alt=""
+                />
+              </div>
+            </div>
+    
+            <!--slider box3-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/91c5a084-1c76-4f06-80f8-35d5d482d29a.jpg?tr=w-200,cm-pad_resize"
+                  alt=""
+                />
+              </div>
+            </div>
+    
+            <!--slider box4-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/523c3548-913a-4844-88eb-5e286e434315.jpg?tr=w-200,cm-pad_resize"
+                  alt=""
+                />
+              </div>
+            </div>
+    
+            <!--slider box5-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/290b7f1e-461e-470e-85b0-2c3e0ea169c3.jpg?tr=w-200,cm-pad_resize
+                        "
+                  alt=""
+                />
+              </div>
+            </div>
+    
+            <!--slider box6-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/637e7263-718a-4b04-97a0-a374da73dc69.jpg?tr=w-200,cm-pad_resize"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!--slider box7-->
+            <div class="sf3-SliderBox">
+              <div>
+                <img
+                  src="https://images-static.nykaa.com/uploads/6fa7f856-9600-4863-b189-7ce2806d7764.jpg?tr=w-200,cm-pad_resize"
+                  alt=""
+                />
+              </div>
+            </div>
+             <!--slider box8-->
+             <div class="sf3-SliderBox">
+                <div>
+                  <img
+                    src="https://images-static.nykaa.com/uploads/a27684b5-44e4-4077-baeb-0636219387ac.jpg?tr=w-200,cm-pad_resize"
+                    alt=""
+                  />
+                </div>
+              </div>
+               <!--slider box9-->
+             <div class="sf3-SliderBox">
+                <div>
+                  <img
+                    src="https://images-static.nykaa.com/uploads/a27684b5-44e4-4077-baeb-0636219387ac.jpg?tr=w-200,cm-pad_resize"
+                    alt=""
+                  />
+                </div>
+              </div>
+    
+          </div>
+          <!--buttons-->
+          <div id="sf3-leftButton">
+            <img
+              src="https://images-static.nykaa.com/uploads/3df01759-af0c-4d81-b2f7-f61577ac3807.svg
+            "
+              alt=""
+            />
+          </div>
+          <!--right button-->
+          <div id="sf3-rightButton">
+            <img
+              src="https://images-static.nykaa.com/uploads/45d5a7b6-86eb-4850-9568-4d6ed91731fe.svg
+            "
+              alt=""
+            />
+          </div>
+        </div>
+    
+        </div>
+
+
+     <!-- GROOMING ADVICE SECTION -->
+
+     <div id="GroomingAdvContainer">
+        <p class="buyingGuides">GROOMING ADVICE</p>
+        <div id="GroomingAdvImgsDiv">
+
+            <div class="groomingAdvImgsC_div">
+                <img src="https://images-static.nykaa.com/uploads/d609438f-c6ae-4c2e-8838-348f60590a4c.jpg?tr=w-600,cm-pad_resize" alt="img">
+                <p class="groomingAdvPara">The Man Report <br>Your Grooming Guide To Looking And Feeling Your Best</p>
+
+            </div>
+
+            <div class="groomingAdvImgsC_div">
+                <img src="https://images-static.nykaa.com/uploads/950ff00c-7758-491a-815d-516b0e94c804.jpg?tr=w-600,cm-pad_resize" alt="img">
+                <p class="groomingAdvPara">Ten Simple Grooming Tips <br>Every (Lazy) Man Should Know</p>
+            </div>
+
+            <div class="groomingAdvImgsC_div">
+                <img src="https://images-static.nykaa.com/uploads/ade73758-516b-4a8a-a3bc-cbfbcc070979.jpg?tr=w-600,cm-pad_resize" alt="img">
+                <p class="groomingAdvPara">The Charcoal Peel Off Mask Challenge<br>What Happens When Boys Take It</p>
+            </div>
+
+            <div class="groomingAdvImgsC_div">
+                <img src="https://images-static.nykaa.com/uploads/3e460f83-81f7-416a-bfcb-61086d57a17b.jpg?tr=w-600,cm-pad_resize" alt="img">
+                <p class="groomingAdvPara">What Men Think Of Beauty Products<br> Ft. Veer Rajwant Singh And Viraj Ghelani</p>
+
+            </div>      
+        </div>
+     </div>
+
+                <!--  -->
+
+            <!-- New Launches Section -->
+
+            <div id="NewLaunchesContainer">
+                <p id="newLaunchesPara">NEW LAUNCHES</p>
+                <div id="newLaunchesGImgsDiv">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/57fee722-2ded-49da-a332-2615a0b0fb61.jpg?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/890c19ed-d4c0-4763-9636-4c083b1deb87.png?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/30241987-3069-4196-b242-cba154643881.png?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/c5692112-4039-4032-9c0e-24d8f87c73d7.png?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/d998e0ba-4411-4813-91ca-a64373aec434.jpg?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/32f9597e-5eb9-448c-8f12-1baecb6e3f80.jpg?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/c9b6e2ae-9eba-45fa-aa8f-bf645864cbb1.jpg?tr=w-300,cm-pad_resize" alt="img">
+                    <img class="newLaunchImgs"src="https://images-static.nykaa.com/uploads/5f215472-a1ad-43b6-8f2f-250d0360365c.jpg?tr=w-300,cm-pad_resize" alt="img">
+                </div>
+
+                <div id="newLaunchesGImgsDiv2">
+                    <img class="newLaunchImgs" src="https://images-static.nykaa.com/uploads/5d1b5550-e18e-407f-9ae7-81dc6046787b.png?tr=w-1290,cm-pad_resize" alt="">
+                </div>
+
+                <div id="newLaunchesGImgsDiv3">
+                    <img class="newLaunchImgs" src="https://images-static.nykaa.com/uploads/077d21ff-7dc4-4f13-9244-0deaecf9a9b3.png?tr=w-1290,cm-pad_resize" alt="img">
+
+                </div>
+
+            </div>
+
+            <!--      FOOTER SECTION      -->
+
+              
+            <div id="footer_container1Dk">
+
+                <div class="footer_contCdiv">
+                    <i class="fas fa-envelope fa-2x msgIconDk"></i>
+                    <p id="msgIconPara">GET SPECIAL DISCOUNT ON YOUR INBOX</p>
+                    <input id="inputFooterDk" type="text" placeholder="Your Email"/>
+                    <button id="btnFooterDk">Send</button>
+
+                </div>
+
+                <div class="footer_contCdiv">
+                    <i class="fas fa-phone-alt fa-2x msgIconDk"></i>
+                    <p id="phnIconPara">FOR ANY HELP YOU MAY CALL US AT<br>1800-267-4444</p>
+                    <br>
+                    <p id="contactTimingDk">(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div id="footer_container2Dk">
+
+
+                <div class="footer_cDivuLDk">
+                    <ul style="color: white; list-style: none; margin-left: 10%;">
+                        <li><h2 style="margin-top: 15%;">NYKAA<br>MAN</h2></li>
+                        <li class="listParaDk list_para_hover">WHO ARE WE?</li> 
+                        <li class="listParaDk list_para_hover">CAREERS</li>
+                        <li class="listParaDk list_para_hover">AUTHENTICITY</li>
+                        <li class="listParaDk list_para_hover">PRESS</li>
+                        <li class="listParaDk list_para_hover">TESTIMONIALS</li>
+                    </ul>
+                </div>
+
+                <div class="footer_cDivuLDk">
+                    <ul style="color: white; list-style: none; margin-top: 15%;">
+                        <li class="listParaDk list_para_hover"  style="font-size: 16px;">HELP</li>
+                        <li class="listParaDk list_para_hover">CONTACT US</li> 
+                        <li class="listParaDk list_para_hover">FREQUENTLY ASKED QUESTIONS</li>
+                        <li class="listParaDk list_para_hover">STORE LOCATOR</li>
+                        <li class="listParaDk list_para_hover">CANCELLATION & RETURN</li>
+                        <li class="listParaDk list_para_hover">SHIPPING & DELIVERY POLICY</li>
+                    </ul>
+                    
+                </div>
+                <div class="footer_cDivuLDk">
+                    <ul style="color: white; list-style: none; margin-top: 15%;">
+                        <li class="listParaDk list_para_hover"  style="font-size: 16px;">QUICK LINKS</li>
+                        <li class="listParaDk list_para_hover">BRAND STORE</li> 
+                        <li class="listParaDk list_para_hover">OFFER ZONE</li>
+                        <li class="listParaDk list_para_hover">SITE MAP</li>
+                    </ul>
+
+                </div>
+                <div class="footer_cDivuLDk">
+
+                    <ul style="color: white; list-style: none; margin-top: 15%;">
+                        <li class="listParaDk list_para_hover" style="font-size: 16px;">TOP CATEGORIES</li>
+                        <li class="listParaDk list_para_hover">SHAVING</li> 
+                        <li class="listParaDk list_para_hover">HAIR CARE</li>
+                        <li class="listParaDk list_para_hover">PERSONAL CARE</li>
+                        <li class="listParaDk list_para_hover">PERFUMES & DEOS</li>
+                        <li class="listParaDk list_para_hover">WELLNESS</li>
+                    </ul>
+                </div>
+                <div class="footer_cDivuLDk">
+                    <ul style="color: white; list-style: none; margin-top: 15%;">
+                        <li  style="font-size: 16px;"> LUXE </li>
+                        <li class="listParaDk list_para_hover">BATH AND BODY</li> 
+                        <li class="listParaDk list_para_hover">HAIR</li>
+                        <li class="listParaDk list_para_hover">FRAGRANCE</li>
+                        <li class="listParaDk list_para_hover">SKIN</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div id="footer_container3Dk">
+
+                <div id="footer_containerCdiv">
+
+                    <div style="margin-top: 5%;">
+                    <img style="display: inline-block;" src="https://adn-static1.nykaa.com/media/listing/nykaaman/nykaaman_shipping.svg" alt="img">
+                    <p class="freeShippingparaDk">FREE SHIPPING</p>
+                    <hr style="margin-left: 20%; color: lightgray; margin-top: -1px; width: 85%;">
+                    <p class="footerLAst2ndPara">for orders above<br>INR499</p>
+                    </div>
+
+
+                    <div style="margin-top: 5%;">
+
+                        <img style="display: inline-block;" src="https://adn-static1.nykaa.com/media/listing/nykaaman/nykaaman_genuine.svg" alt="img">
+                        <p style="margin-left: 5%;" class="freeShippingparaDk">AUTHENTIC<br>PRODUCTS</p>
+                        <hr style="margin-left: 25%; color: lightgray; margin-top: -1px; width: 85%;">
+                        <p class="footerLAst2ndPara">Sourced Directly from<br> Brands/ Authorised Distributors</p>
+
+                    </div>
+
+
+                    <div style="margin-top: 5%;">
+
+                       <p class="freeShippingparaDk socialMediaPara">SHOW US SOME LOVE ON SOCIAL MEDIA</p>
+                       <i class="fab instaFbIcon fa-instagram-square fa-2x"></i>
+                       <i style="margin-left: 5%;" class="fab instaFbIcon fa-facebook-square fa-2x"></i>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="footer_container4Dk">
+
+                <div id="footer_containerCd4Dk">
+                    <p class="footerMostParaDk">TERMS & CONDITIONS</p>
+                    <p class="footerMostParaDk">SHIPPING POLICY</p>
+                    <p class="footerMostParaDk">CANCELLATION POLICY</p>
+                    <p class="footerMostParaDk">PRIVACY POLICY</p>
+
+                    <p id="footerMostPara2Dk">© 2021 Nykaa E-Retail Pvt. Ltd. All Rights Reserved.</p>
+                </div>
+            </div>
+
+
+            <br><br><br><br><br><br>
+
+
+    
+</body>
+</html>
+<script>
+    let sliderList = document.querySelector("#sf3-Slider");
+    let items = sliderList.querySelectorAll(".sf3-SliderBox");
+    let count = 1;
+  
+    document.getElementById("sf3-leftButton").addEventListener("click", () => {
+      SF3prevSlide();
+    });
+  
+    document.getElementById("sf3-rightButton").addEventListener("click", () => {
+      SF3nextSlide();
+    });
+  
+    function SF3prevSlide() {
+      if (count > 1) {
+        count = count - 2;
+        sliderList.style.left = "-" + count * 220 + "px";
+        count++;
+      }
+    }
+  
+    function SF3nextSlide() {
+      if (count < 3) {
+        sliderList.style.left = "-" + count * 210 + "px";
+        count++;
+      }
+    }
+  </script>
+  
