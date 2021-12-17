@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        #unq_product_cont{
+            border: 1px solid transparent;
+            height: 560px;
+        }
+        #unq_product_C_cont{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border: 1px solid transparent;
+            height: 98%;
+            width: 74%;
+            margin: auto;
+            display: flex;
+        }
+        #unq_imgDiv{
+            border: 1px solid transparent;
+            border-right: 1px solid lightgray;
+            height: 99%;
+            width: 36%;
+            background-color: white;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 35px;
+        }
+        #unq_detailsDiv{
+            border: 1px solid transparent;
+            height: 99%;
+            width: 62%;
+            background-color: white;
+        }
+        #imgChildDiv{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid transparent;
+            height: 475px;
+            margin-top: 5%;
+        }
+        #smallImgUnqP{
+            height: 55px;
+            width: 55px;
+            border: 1px solid darkgray;
+            margin-top: 20%;
+            margin-left: -5%;
+
+        }
+        #full_imgDiv{
+            border: 1px solid transparent;
+            width: 70%;
+        }
+        #unq_p_NameDiv{
+            border: 1px solid transparent;
+            width: 85%;
+            margin-left: 3%;
+        }
+        #unq_p_ratingDiv{
+            border: 1px solid transparent;
+            margin-left: 3%;
+            height: 40px;
+            display: flex;
+            gap: 5px;
+        }
+        .fa-star{
+            color: rgb(187, 185, 185);
+        }
+        #unq_color_stars{
+            color: #003243;
+        }
+        #unq_mrpDiv{
+            border: 1px solid transparent;
+            height: 42px;
+            display: flex;
+            margin-left: 3%;
+            gap: 10px;
+        }
+        #unq_p_taxesDiv{
+            border: 1px solid transparent;
+            margin-left: 3%;
+            margin-top: -25px;
+        }
+        #unq_p_offersDiv{
+            border: 1px solid transparent;
+            width: 88%;
+            margin-left: 3%;
+            background-color: #eceef0;
+            height: 40px;
+            border-radius: 3px;
+        }
+        #unq_p_btnInpDiv{
+            border: 1px solid transparent;
+            height: 200px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 3%;
+        }
+        #unq_p_btnDiv{
+            border-right: 1px solid rgb(199, 198, 198);
+            height: 92%;
+            width: 43%;
+            margin-top: 2%;
+        }
+        #unq_p_inputDiv{
+            height: 99%;
+            width: 49%;
+            margin-top: 4%;
+        }
+        #unq_p_staticParaDiv{
+            border: 1px solid transparent;
+            border-top: 1px solid lightgray;
+            display: flex;
+            gap: 70px;
+            height: 54px;
+            background-color: #f3f4f6;
+        }
+        #unq_p_btn {
+            width: 230px;
+            height: 49px;
+            background-color: #003243;
+            color: white;
+            border: none;
+            margin-top: 16%;
+            margin-left: 16%;
+            font-weight: 700;
+        }
+        #deliveryInput_dk{
+            width: 195px;
+            height: 28px;
+            border: 1px solid lightgray;
+            border-right: none;
+            outline: none;
+        }
+        #deliveryBtnCheck{
+            width: 70px;
+            height: 32px;
+            background-color: white;
+            color: #003243;
+            border: 1px solid lightgray;
+            border-left: none;
+            font-weight: 600;
+        }
+        .staticParaDk{
+            font-size: 12px;
+            line-height: 20px;
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+        }
+        .unq_productTexts{
+            font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+            color: #001632;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="unq_product_cont">
+
+        <div id="unq_product_C_cont">
+
+            <div id="unq_imgDiv">
+
+
+            </div>
+            <div id="unq_detailsDiv">
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    let unq_imgS_Div = document.getElementById("unq_imgDiv");
+    let unq_detailsDiv = document.getElementById("unq_detailsDiv");
+
+
+    let unq_product = JSON.parse(localStorage.getItem("unq_productDetails"));
+    console.log(unq_product);
+
+    displayUnqProduct(unq_product);
+
+    function displayUnqProduct(item) {
+
+        //      IMAGES SECTION STARTS   //////////////
+        let imgDiv = document.createElement("div");
+        imgDiv.setAttribute("id","full_imgDiv");
+
+        let full_image = document.createElement("img")
+        full_image.src = item[0].img1[0];
+        full_image.style.width = "300px";
+        full_image.style.height = "280px";
+        full_image.style.marginTop = "22%";
+        imgDiv.append(full_image);
+
+        let imgChildDiv = document.createElement("div");
+        imgChildDiv.setAttribute("id","imgChildDiv");
+        for(let i = 0; i < item[0].img1.length; i++) {
+
+            let small_img = document.createElement("img");
+            small_img.src = item[0].img1[i];
+            small_img.setAttribute("id", "smallImgUnqP")
+            imgChildDiv.append(small_img);
+            small_img.addEventListener("mouseover", () => {
+                small_img.style.border = "1px solid red";
+                full_image.src = small_img.src;
+            });
+            small_img.addEventListener("mouseout", () => {
+                small_img.style.border = "1px solid darkgray"
+            })
+        }
+
+        //      IMAGES SECTION ENDS  ////////
+
+
+
+
+        //PRODUCT DETAILS SECTION STARTS  ////////
+        let unq_p_NameDiv = document.createElement("div");
+        unq_p_NameDiv.setAttribute("id", "unq_p_NameDiv")
+
+        let unq_p_Name = document.createElement("h2");
+        unq_p_Name.setAttribute("class", "unq_productTexts");
+        unq_p_Name.innerText = item[0].name;
+
+        unq_p_NameDiv.append(unq_p_Name)
+
+        let unq_p_ratingDiv = document.createElement("div");
+        unq_p_ratingDiv.setAttribute("id", "unq_p_ratingDiv");
+
+        let unq_pRatingDiv = document.createElement("div");
+
+       
+        let unq_star_rating1 = document.createElement("span");
+       unq_star_rating1.setAttribute("class", "fa fa-star");
+
+        let unq_star_rating2 = document.createElement("span");
+       unq_star_rating2.setAttribute("class", "fa fa-star");
+
+        let unq_star_rating3 = document.createElement("span");
+       unq_star_rating3.setAttribute("class", "fa fa-star");
+
+        let unq_star_rating4 = document.createElement("span");
+        unq_star_rating4.setAttribute("class", "fa fa-star");
+
+        let unq_star_rating5 = document.createElement("span");
+        unq_star_rating5.setAttribute("class", "fa fa-star");
+
+        let unq_star_ratingP = document.createElement("h4");
+        unq_star_ratingP.setAttribute("class", "unq_productTexts")
+        unq_star_ratingP.style.marginTop = "0px";
+        unq_star_ratingP.style.marginLeft = "5px";
+        unq_star_ratingP.style.paddingRight = "10px";
+        unq_star_ratingP.style.borderRight = "1px solid lightgray";
+        unq_star_ratingP.innerHTML = `${item[0].rating}/5`;
+
+        let dkNum = Math.round(Math.random()*50);
+        let dkNum2 = Math.round(Math.random()*500);
+        let dkNum3 = Math.round(Math.random()*100);
+
+        let unq_rating_reviewsP = document.createElement("h4");
+        unq_rating_reviewsP.setAttribute("class", "unq_productTexts")
+        unq_rating_reviewsP.innerHTML = `${dkNum2} Ratings & ${dkNum3} Reviews`;
+        unq_rating_reviewsP.style.marginTop = "0px";
+        unq_rating_reviewsP.style.marginLeft = "10px";
+        unq_rating_reviewsP.style.paddingRight = "10px";
+        unq_rating_reviewsP.style.borderRight = "1px solid lightgray";
+
+        let unq_rating_Qna = document.createElement("h4");
+        unq_rating_Qna.setAttribute("class", "unq_productTexts")
+        unq_rating_Qna.innerHTML = `${dkNum} Q&As`;
+        unq_rating_Qna.style.marginTop = "0px";
+        unq_rating_Qna.style.marginLeft = "10px";
+
+        unq_p_ratingDiv.append(unq_star_rating1,unq_star_rating2,unq_star_rating3,unq_star_rating4,unq_star_rating5,unq_star_ratingP,unq_rating_reviewsP,unq_rating_Qna)
+
+        let unq_show = Math.floor(Number(item[0].rating));
+
+        let unq_star_spans = unq_p_ratingDiv.childNodes;
+        for(let i = 0; i < unq_show; i++) {
+
+            unq_star_spans[i].setAttribute("id", "unq_color_stars")
+        }
+
+
+        let unq_mrpDiv = document.createElement("div");
+        unq_mrpDiv.setAttribute("id","unq_mrpDiv");
+
+        let unq_Pmrp = document.createElement("h4");
+       unq_Pmrp.setAttribute("class", "unq_productTexts")
+       unq_Pmrp.innerText = `MRP:`;
+       unq_Pmrp.style.color = "silver";
+       unq_Pmrp.style.marginTop = "0px";
+
+
+       let unq_p_old_price = document.createElement("h4");
+       unq_p_old_price.setAttribute("class", "unq_productTexts");
+       unq_p_old_price.style.textDecoration = "line-through";
+        unq_p_old_price.innerText = `₹${item[0].oldPrice}`;
+        unq_p_old_price.style.color = "silver";
+        unq_p_old_price.style.marginTop = "0px";
+       
+
+       let unq_p_new_price = document.createElement("h4");
+       unq_p_new_price.setAttribute("class", "unq_productTexts");
+        unq_p_new_price.innerText = `₹${item[0].newPrice} |`;
+        unq_p_new_price.style.marginTop = "0px";
+
+
+       let uniq_p_discount = document.createElement("h4");
+       uniq_p_discount.setAttribute("class", "unq_productTexts");
+        uniq_p_discount.innerText = item[0].discount;
+        uniq_p_discount.style.marginTop = "0px";
+
+        unq_mrpDiv.append(unq_Pmrp,unq_p_old_price,unq_p_new_price,uniq_p_discount);
+
+
+
+        let unq_p_taxesDiv = document.createElement("div");
+        unq_p_taxesDiv.setAttribute("id","unq_p_taxesDiv");
+
+        let unq_p_taxespara = document.createElement("h4");
+        unq_p_taxespara.innerText = "inclusive of all taxes";
+        unq_p_taxespara.style.color = "#475562";
+
+
+        unq_p_taxesDiv.append(unq_p_taxespara);
+
+
+        let unq_p_offersDiv = document.createElement("div");
+        unq_p_offersDiv.setAttribute("id", "unq_p_offersDiv");
+
+        let dkNum4 = Math.floor(Math.random()*20);
+
+        let unq_p_offerspara = document.createElement("p");
+        unq_p_offerspara.style.fontSize="13px";
+        unq_p_offerspara.style.marginLeft = "4%";
+        unq_p_offerspara.style.marginTop = "10px";
+        unq_p_offerspara.innerHTML = `Buy 2, Get Extra ${dkNum4}% OFF on Cart`;
+        unq_p_offersDiv.append(unq_p_offerspara);
+
+
+
+        let unq_p_btnInpDiv = document.createElement("div");
+        unq_p_btnInpDiv.setAttribute("id", "unq_p_btnInpDiv");
+
+        let unq_p_btnDiv = document.createElement("div");
+        unq_p_btnDiv.setAttribute("id", "unq_p_btnDiv");
+
+        let unq_p_btn = document.createElement("button");
+        unq_p_btn.setAttribute("id", "unq_p_btn");
+        unq_p_btn.textContent = "ADD TO CARD";
+        unq_p_btnDiv.append(unq_p_btn);
+
+        let unq_p_inputDiv = document.createElement("div");
+        unq_p_inputDiv.setAttribute("id", "unq_p_inputDiv");
+
+        let unq_divLocation = document.createElement("div")
+
+        let unq_deliveryIcon = document.createElement("div");
+        unq_deliveryIcon.innerHTML = ``
+        unq_divLocation.append(unq_deliveryIcon)
+
+        let unq_deliveryPara = document.createElement("h4");
+        unq_deliveryPara.innerText = "DELIVERY OPTIONS"
+
+        let unq_divLocationInp = document.createElement("div")
+
+        let deliveryInput_dk = document.createElement("input");
+        deliveryInput_dk.setAttribute("id","deliveryInput_dk");
+        deliveryInput_dk.placeholder = "Enter Pincode";
+
+        let deliveryBtnCheck = document.createElement("button");
+        deliveryBtnCheck.textContent = "CHECK"
+        deliveryBtnCheck.setAttribute("id","deliveryBtnCheck");
+
+
+        unq_divLocationInp.append(deliveryInput_dk,deliveryBtnCheck);
+
+
+        unq_p_inputDiv.append(unq_divLocation,unq_deliveryPara,unq_divLocationInp);
+
+        unq_p_btnInpDiv.append(unq_p_btnDiv,unq_p_inputDiv);
+
+
+
+
+
+        
+
+        let unq_p_staticParaDiv = document.createElement("div");
+        unq_p_staticParaDiv.setAttribute("id","unq_p_staticParaDiv");
+
+        let unq_staticPdiv1 = document.createElement("div");
+        unq_staticPdiv1.style.marginLeft = "5%";
+        let staticPara1 = document.createElement("p");
+        staticPara1.setAttribute("class", "staticParaDk");
+        staticPara1.innerText = "100% GENUINE PRODUCTS";
+        unq_staticPdiv1.append(staticPara1);
+
+        let unq_staticPdiv2 = document.createElement("div");
+        let staticPara2 = document.createElement("p");
+        staticPara2.setAttribute("class", "staticParaDk");
+        staticPara2.innerText = "EASY RETURN POLICY";
+        unq_staticPdiv2.append(staticPara2);
+
+        let unq_staticPdiv3 = document.createElement("div");
+        let staticPara3 = document.createElement("p");
+        staticPara3.setAttribute("class", "staticParaDk");
+        staticPara3.innerText = "SOLD BY :NYKAA E RETAIL PVT LTD";
+        unq_staticPdiv3.append(staticPara3);
+
+
+        unq_p_staticParaDiv.append(unq_staticPdiv1,unq_staticPdiv2,unq_staticPdiv3);
+
+
+
+       unq_detailsDiv.append(unq_p_NameDiv,unq_p_ratingDiv,unq_mrpDiv,unq_p_taxesDiv,unq_p_offersDiv,unq_p_btnInpDiv,unq_p_staticParaDiv)
+        unq_imgS_Div.append(imgDiv,imgChildDiv)
+    }
+
+
+</script>
