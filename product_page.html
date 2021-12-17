@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="slider.css">
+
+    <style>
+        body{
+            background-color: rgb(235,235,235);
+        }
+        #sortby{
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            /* background-color: white; */
+        }
+        #contain{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: yellow; */
+            /* width: 15%; */
+            padding:5px
+        }
+        .img{
+            margin-right: 5%;
+        }
+        /* #sortby{
+            background-color: whitesmoke;
+        } */
+        .up{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        .flexx{
+            display: flex;
+            flex-direction: column;
+            /* background-color: violet; */
+            /* width: 11%; */
+        }
+        #selection{
+            display: flex;
+            flex-direction: column;
+            /* background-color: turquoise; */
+        }
+    
+        .radio{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 170px;
+            padding: 10px;
+        }
+ 
+        .categ{
+            display: flex;
+            flex-direction: column;
+        }
+        #arrowdiv{
+            display: flex;
+            justify-content: space-between;
+            min-width: 200px;
+            align-items: center;
+        }
+        #filters{
+            margin-top: 20px;
+            background-color: white;
+            min-width: 170px;
+            display: flex;
+            flex-direction: column;
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0; 
+            left: 94px;
+        }
+        #topdiv{
+            display: flex;
+            justify-content:space-between;
+            /* width: 300px; */
+            /* align-content: center; */
+        }
+
+        /* Mapp */
+        #productsContDk{
+            border: 1px solid transparent;
+            margin: auto;
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            gap: 20px;
+        }
+        #productChildDiv{
+            border: 1px solid transparent;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: white;
+        }
+        #mrp_div{
+            border: 1px solid transparent;
+            display: flex;
+            gap: 10px;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 2    0px;
+        }
+        #btn_div{
+            border: 1px solid transparent;
+            height: 60px;
+        }
+        #btn_addTobag{
+            height: 100%;
+            width: 100%;
+            background-color: #003243;
+            color: white;
+            border: none;
+        }
+        #color_stars{
+            color: #003243;
+        }
+        #rating_div{
+
+            /* border: 1px solid rebeccapurple; */
+            margin-top:10px;
+            height: 35px;
+            width: 35%;
+            margin: auto;
+        }
+        .fa-star{
+            color: rgb(187, 185, 185);
+        }
+        .productTexts{
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        #form9 input{
+        /* width: 20px; */
+        
+        position:absolute;
+        /* top:1; */
+        /* right:0; */
+        
+        /* margin-right: 100%; */
+        }
+        #filterdiv{
+            width: 19%;
+        }
+        #main{
+            width: 93%;
+        }
+        #navbar + h2 {
+            margin-left: 45%;
+
+        }
+        #slidos + h2 {
+            margin-left: 45%;
+
+        }
+        #navbar{
+            margin-bottom: 40px;
+        }
+        #slidos{
+            height: 400px;
+        }
+        #arrowdiv h4{
+            margin-left: 5%;
+        }
+  
+     
+
+    </style>
+</head>
+<body>
+
+<div id="primediv">
+    <!-- Navbar div -->
+    <div id="navbar"></div>
+
+    <h2 class="productTexts"> Hair Products (1123)</h2>
+
+    <div id="slidos">
+        <div class="slider">
+            <div class="slide_viewer">
+              <div class="slide_group">
+                <div class="slide">
+                  <img src="https://images-static.nykaa.com/uploads/0301ea79-a6f7-4748-bc5c-286b875a9755.jpg?tr=w-1200,cm-pad_resize" >
+                </div>
+                <div class="slide">
+                  <img src="https://images-static.nykaa.com/uploads/2c8d7944-a627-46a6-b966-ac9a051e09bc.jpg?tr=w-1200,cm-pad_resize" >
+                </div>
+                <div class="slide">
+                  <img src="https://images-static.nykaa.com/uploads/cac66745-bb74-4be2-9c94-6cfcdfdb9087.jpg?tr=w-1200,cm-pad_resize" />
+                </div>
+              </div>
+            </div>
+          </div><!-- End // .slider -->
+          
+          <div class="slide_buttons">
+          </div>
+          
+          <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+              <img src="https://images-static.nykaa.com/uploads/3df01759-af0c-4d81-b2f7-f61577ac3807.svg" />
+            </div>
+            <div class="next_btn" title="Next">
+              <img src="https://images-static.nykaa.com/uploads/45d5a7b6-86eb-4850-9568-4d6ed91731fe.svg" />
+            </div>
+          </div><!-- End // .directional_nav -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </div>
+
+    <h2 class="productTexts"> All Products</h2>
+
+    <div id="topdiv">
+
+   
+
+<div id="filterdiv">
+
+<div id="main">
+    <div id="contain">
+
+        <!-- Sorting div -->
+        <div id="sortby">
+
+            <!-- Sort by text -->
+            
+                <pre><h4 class="productTexts" style="display: inline-block;">Sort By : </h4></pre>
+                <pre><h4 class = "productTexts" id="val" style="display: inline-block;">Popularity     </h4></pre>
+           </div>
+            
+
+           <div class="img">
+
+            <img id="down" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+            <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/>
+            </div>
+
+            
+        </div>
+
+        
+        <div class="flexx">
+
+            <!-- <br> -->
+        <form class="up">
+        <div class="radio">
+        <label  for="sizecheck1" class="size productTexts">Discount</label>
+        <input  type="radio" id="sizecheck1" name="color" value="Discount"/>
+  
+        </div>
+
+        <div class="radio">
+            <label for="sizecheck2" class="size productTexts">Name</label>
+        <input type="radio" id="sizecheck2" name="color" value="Name"/>
+  
+        </div>
+
+        <div class="radio">
+            <label for="sizecheck3" class="size productTexts">Coustmer Top Rated</label>
+        <input type="radio" id="sizecheck3" name="color" value="Coustmer Top Rated"/>
+       
+        </div>
+
+        <div class="radio">
+            <label for="sizecheck4" class="size productTexts">New Arrivals</label>
+        <input type="radio" id="sizecheck4" name="color" value="New Arrivals">
+  
+        </div>
+
+        <div class="radio">
+            <label for="sizecheck5" class="size productTexts">Price : Low to High</label>
+        <input type="radio" id="sizecheck5" name="color" value="Price : Low to High"/>
+   
+        </div>
+
+        <div class="radio">
+            <label for="sizecheck5" class="size productTexts">Price : High to Low</label>
+        <input type="radio" id="sizecheck5" name="color" value="Price : High to Low"/>
+
+        </div>
+    </form>
+    </div>
+    </div>
+
+    <div id="filters">
+
+        <div id="categ">
+
+            <div id="arrowdiv" onclick="changeit(1)">
+                <pre><h4 class="productTexts">Categories    </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx1">
+                <form class="up" id="form1">
+                
+                <div>
+                <label for="scales">Facewash</label>
+                <input type="checkbox" id="scales" name="scales" value="Facewash"/>
+                
+                </div>
+
+                <div>
+                 <label for="scales">Bodywash</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+              
+                </div>
+
+                <div>
+                    <label for="scales">Serum</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+              
+                </div>
+                </form> 
+            </div>
+        </div>
+
+        
+        <div id="categ1">
+
+            <div id="arrowdiv" onclick="changeit(2)">
+                <pre><h4 class="productTexts">Brand    </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx2">
+                <form class="up" id="form2">
+                
+                <div>
+                    <label for="scales">Nyaka naturals</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                 <label for="scales">Vaadi Herbels</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Vedic Line</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+                </form> 
+            </div>
+        </div>
+
+        <div id="categ2">
+
+            <div id="arrowdiv" onclick="changeit(3)">
+                <pre><h4 class="productTexts">Price    </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx2">
+                <form class="up" id="form3">
+                
+                <div>
+                    <label for="scales">Rs 0 - Rs. 499</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Rs 500 - Rs. 999</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Rs 1000 - Rs. 1999</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">Rs 2000 - Rs. 3999</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Rs 4000 & Above</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                    </div>
+
+                
+                </form> 
+            </div>
+        </div>
+
+
+        <div id="categ3">
+
+            <div id="arrowdiv" onclick="changeit(4)">
+                <pre><h4 class="productTexts">Discount    </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx2">
+                <form class="up" id="form4">
+                
+                <div>
+                <label for="scales">70% And Above </label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">60% And Above </label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">50% And Above </label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">40% And Above </label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">30% And Above </label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                    </div>
+
+                    <div>
+                        <label for="scales">20% And Above </label>
+                        <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                        
+                    </div>
+
+                    <div>
+                        <label for="scales">10% And Above </label>
+                        <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                        
+                    </div>
+
+                    <div>
+                        <label for="scales">All Discounted Products</label>
+                        <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                        
+                    </div>
+
+                
+                </form> 
+            </div>
+        </div>
+
+
+
+        <div id="categ4">
+
+            <div id="arrowdiv" onclick="changeit(5)">
+                <pre><h4 class="productTexts"> Avg Coustmer Rating   </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx3">
+                <form class="up" id="form5">
+                
+                <div>
+                <label for="scales">4 Stars and Above</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">3 Stars and Above</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">2 Stars and Above</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">1 Stars and Above</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                </form> 
+            </div>
+        </div>
+
+        <div id="categ6">
+
+            <div id="arrowdiv" onclick="changeit(6)">
+                <pre><h4 class="productTexts"> Preferences   </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx6">
+                <form class="up" id="form6">
+                
+                <div>
+                <label for="scales">Cruelty-Free</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Paraben-Free</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Natural</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">Vegan</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Organic</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+                
+                <div>
+                    <label for="scales">Herbel</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                </form> 
+            </div>
+        </div>
+
+
+        <div id="categ7">
+
+            <div id="arrowdiv" onclick="changeit(7)">
+                <pre><h4 class="productTexts"> Concern   </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx7">
+                <form class="up" id="form7">
+                
+                <div>
+                <label for="scales">Dryness</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Dark-Spots/Pigmentation</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Dullness</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">Brightening</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Acme/Blemishes</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+                
+                <div>
+                    <label for="scales">Pores/Blackheads/Whiteheads</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Anti-Ageging</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Fine Lines/Wrinkles</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Oil Control</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Sun-Protection</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Anti-Pollution</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                </form> 
+            </div>
+        </div>
+
+
+        <div id="categ8">
+
+            <div id="arrowdiv" onclick="changeit(8)">
+                <pre><h4 class="productTexts"> Formulation   </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx8">
+                <form class="up" id="form8">
+                
+                <div>
+                <label for="scales">Liquid</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Cream</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Mask</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">Gel</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Oil</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+                
+                <div>
+                    <label for="scales">Lotion/Body Butter</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Scrub</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Bar</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Foam</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Serum</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Pack</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                </form> 
+            </div>
+        </div>
+
+
+        <div id="categ9">
+
+            <div id="arrowdiv" onclick="changeit(9)">
+                <pre><h4 class="productTexts"> Ingredient   </h4></pre>
+
+                <div class=img>
+                    <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
+                    <!-- <img class="up" src="https://image.flaticon.com/icons/png/512/37/37559.png" width="15px" height="10px"/> -->
+                </div>
+            </div>
+
+            <div id="flexx9">
+                <form class="up" id="form9">
+                
+                <div>
+                <label for="scales">Aloo-veera</label>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Neem</label>
+                <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                
+                </div>
+
+                <div>
+                <label for="scales">Charcoal</label>
+                <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                
+                </div>
+
+                <div>
+                    <label for="scales">Turmeric</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Honey</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+                
+                <div>
+                    <label for="scales">Shea Butter</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                <div>
+                    <label for="scales">Green Tea</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Coconut</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Papaya</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">SandalWood</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                
+                <div>
+                    <label for="scales">Pack</label>
+                    <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                    
+                </div>
+
+                </form> 
+            </div>
+        </div>
+
+
+
+        
+
+    </div>
+    
+</div>  
+
+<!-- Mapped div -->
+<div id="productsContDk"></div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    // console.log(document.getElementById("sizecheck3").value)
+
+    // Selection option
+    document.getElementById("filters").setAttribute("class","productTexts")
+    document.getElementById("contain").addEventListener("click",change)
+    var click_c=0
+    function change() {
+        click_c++
+        // Changing arrow on click
+        if(click_c%2==0) {
+            // console.log(click_c)
+            document.getElementById("down").removeAttribute("src")
+            document.getElementById("down").setAttribute("src","https://image.flaticon.com/icons/png/512/37/37559.png")
+    
+
+
+        document.querySelector("form").removeAttribute(".up")
+        document.querySelector("form").setAttribute("class","show")
+        }
+        else {
+
+        document.getElementById("down").removeAttribute("src")
+        document.getElementById("down").setAttribute("src","https://cdn.onlinewebfonts.com/svg/img_69892.png")
+
+        document.querySelector("form").removeAttribute(".show")
+        document.querySelector("form").setAttribute("class","up")   
+        }
+
+
+    }
+
+    // Categories
+    // document.getElementById("arrowdiv").addEventListener("click",changeit)
+    
+  var click_f=0
+    function changeit(a) {
+        
+        // console.log(a)
+        // console.log("hety")
+        // show
+        // 
+        
+        if(click_f%2==0) {
+            // console.log(click_f)
+            // console.log("ohyea")
+            
+            // console.log(`form${a}`)
+            document.getElementById("down1").removeAttribute("src")
+            document.getElementById("down1").setAttribute("src","https://image.flaticon.com/icons/png/512/37/37559.png")
+            
+            document.getElementById(`form${a}`).removeAttribute(".up")
+            // console.log(document.getElementById(`form1`))
+            document.getElementById(`form${a}`).setAttribute("class","show")
+        }
+        else {
+            // console.log("Nope")
+            document.getElementById("down1").removeAttribute("src")
+        document.getElementById("down1").setAttribute("src","https://cdn.onlinewebfonts.com/svg/img_69892.png")
+
+            document.getElementById(`form${a}`).removeAttribute(".show")
+            document.getElementById(`form${a}`).setAttribute("class","up")   
+        }
+        click_f++
+    }
+
+
+
+    // mapping script
+    let containerP = document.getElementById("productsContDk");
+
+
+
+
+var productData = [
+//product1
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/7/8/78b6578nykmcf0000003_1rvm.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/7/8/78b6578nykmcf0000003_2rvm.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/7/8/78b6578nykmcf0000003_3rvm.jpg",
+],
+name: "MCaffeine Naked & Raw Deep Cleansing Coffee Face Wash",
+oldPrice: "349",
+newPrice: "315",
+discount: "10% off!",
+category: "Face Wash",
+rating: "4.4",
+},
+
+//product2
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/7/e/7e5fba78901526005871.png",
+],
+name: "Garnier Men Turbo Bright Facewash - Pack Of 2",
+oldPrice: "570",
+newPrice: "399",
+discount: "30% off!",
+category: "Face Wash",
+rating: "4.6",
+},
+
+//product3
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/4/7/4710032517839.jpeg",
+],
+name: "Neutrogena Hydro Boost Water Gel - Mini",
+oldPrice: "470",
+newPrice: "370",
+discount: "9% off!",
+category: "moisturizers",
+rating: "4.4",
+},
+
+//product4
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/5/f/5f05cc4e000334_1rev.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/5/f/5f05cc4the_body_shop_acert.jpg",
+],
+name: "The Body Shop Tea Tree Skin Clearing Facial Wash",
+oldPrice: "845",
+newPrice: "745",
+discount: "10% off!",
+category: "Face Wash",
+rating: "4.4",
+},
+
+//product5
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__0_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__1_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__2_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__3_.jpg",
+],
+name: "Minimalist Multi-vitamin SPF 50 PA ++++ Sunscreen For Complete Sun Protection",
+oldPrice: "275",
+newPrice: "220",
+discount: "20% off!",
+category: "Face Wash",
+rating: "4.2",
+},
+
+//product6
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_5.jpg",
+],
+name: "Garnier Men Acno Fight Pimple Clearing Whitening Cream",
+oldPrice: "165",
+newPrice: "124",
+discount: "25% off!",
+category: "moisturizers",
+rating: "4.4",
+},
+
+//product7
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_4.jpg",
+],
+name: "Nykaa SKINRX 20% Vitamin C Face Serum for Bright, Glowing & Radiant Skin with 1% Hyaluronic Acid",
+oldPrice: "899",
+newPrice: "799",
+discount: "15% off!",
+category: "moisturizers",
+rating: "3",
+},
+
+//product8
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901526003921_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901526003921-1_1.png",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901526003921-3_1.png",
+],
+name: "Garnier Skin Naturals Face Serum Sheet Mask Pack of 10",
+oldPrice: "990",
+newPrice: "644",
+discount: "30% off!",
+category: "Masks & Peels",
+rating: "4.6",
+},
+
+//product9
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_4.jpg",
+],
+name: "Nykaa SKINRX 20% Vitamin C Face Serum for Bright, Glowing & Radiant Skin with 1% Hyaluronic Acid",
+oldPrice: "1399",
+newPrice: "1199",
+discount: "20% off!",
+category: "Masks & Peels",
+rating: "4.4",
+},
+
+//product10
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_3.jpg",
+],
+name: "Nykaa Skin Secrets Snail Sheet Mask",
+oldPrice: "159",
+newPrice: "100",
+discount: "5% off!",
+category: "Masks & Peels",
+rating: "4.5",
+},
+
+//product11
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new5.jpg",
+],
+name: "Nivea Men Fresh Face Moisturizer Gel, Non Sticky & Light Moisturization (30ml)",
+desc: "",
+oldPrice: "159",
+newPrice: "95",
+discount: "15% off!",
+category: "moisturizers",
+rating: "4.4",
+},
+
+//product12
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245714079_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245714079_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245714079_4.jpg",
+],
+name: "Nykaa Naturals Cucumber & Aloe Vera Face Wash for Hydrated Skin (100ml)",
+oldPrice: "139",
+newPrice: "111",
+discount: "20% off!",
+category: "face Wash",
+rating: "4.6",
+},
+
+//product13
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/n/y/nymcfcom00076_5new.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/n/y/nymcfcom00076_2new.jpg",
+],
+name: "MCaffeine Complete Coffee Face-Body-Hair Pampering Kit",
+oldPrice: "4139",
+newPrice: "2999",
+discount: "28% off!",
+category: "Scrubs & Exfoliators",
+rating: "4.5",
+},
+
+//product14
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/3/7/37be0618908014468033_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/7/37be0618908014468033_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/7/37be0618908014468033_4.jpg",
+],
+name: "TNW The Natural Wash Lip Lightening Exfoliating and Moisturizing Scrub for Tanned Darkened Lips",
+oldPrice: "440",
+newPrice: "399",
+discount: "9% off!",
+category: "Scrubs & Exfoliators",
+rating: "4.2",
+},
+
+//product15
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/c/d/cd78ba58906087772460_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/c/d/cd78ba58906087772460_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/c/d/cd78ba58906087772460_4.jpg",
+],
+name: "Mamaearth Ubtan Scrub For Face With Turmeric & Walnut For Tan Removal",
+oldPrice: "349",
+newPrice: "332",
+discount: "5% off!",
+category: "Scrubs & Exfoliators",
+rating: "4.4",
+},
+
+//product16
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/7/0/70160fb8906009456263_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/7/0/70160fb8906009456263_3.jpg",
+],
+name: "Biotique Bio Papaya Revitalizing Tan Removal Scrub",
+oldPrice: "299",
+newPrice: "199",
+discount: "21% off!",
+category: "Scrubs & Exfoliators",
+rating: "4.4",
+},
+
+//product17
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/n/y/nykab00000171_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/n/y/nykab00000171_2_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/n/y/nykab00000171_5_1.jpg",
+],
+name: "Nykaa Naturals Saffron & Honey Face Scrub for Glowing Skin",
+oldPrice: "249",
+newPrice: "224",
+discount: "10% off!",
+category: "Scrubs & Exfoliators",
+rating: "4.5",
+},
+
+//product18
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8906091921182_1__new.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8906091921182_4_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8906091921182_2_.jpg",
+],
+name: "Volamena Men’s All in 1 Whitening Cream with SPF 30 ++",
+oldPrice: "499",
+newPrice: "399",
+discount: "20% off!",
+category: "Sunscreen",
+rating: "3.9",
+},
+
+//product19
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/b/2/b2ad7a7minim00000027_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/b/2/b2ad7a7minim00000027_4.jpg",
+],
+name: "Minimalist Multi-vitamin SPF 50 PA ++++ Sunscreen For Complete Sun Protection",
+oldPrice: "499",
+newPrice: "399",
+discount: "19% off!",
+category: "Sunscreen",
+rating: "4.5",
+},
+
+//product20
+{
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/1/e/1ed37028992304014406_1.png",
+  "https://images-static.nykaa.com/media/catalog/product/1/e/1ed37028992304014406_1.png",
+  "https://images-static.nykaa.com/media/catalog/product/1/e/1ed37028992304014406_2.png",
+],
+name: "L'Oreal Paris White Perfect Day Cream SPF 17 PA++(20ml)",
+oldPrice: "399",
+newPrice: "250",
+discount: "30% off!",
+category: "Sunscreen",
+rating: "4.2",
+},
+
+{
+// 21
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/a/c/acf7ff9nykmcf0000004_1new.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/a/c/acf7ff9nykmcf0000004_2new.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/a/c/acf7ff9nykmcf0000004_3new.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/a/c/acf7ff9nykmcf0000004_4new.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/a/c/acf7ff9nykmcf0000004_5new.jpg",
+],
+name: "MCaffeine Naked & Raw Tan Removal Coffee Face Scrub",
+
+oldPrice: "349",
+newPrice: "315",
+discount: "10% Off!",
+category: "Face Wash",
+rating: "4.4",
+},
+{
+// 22
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/7/e/7e5fba78901526005871.png",
+],
+name: "Garnier Men Turbo Bright Facewash - Pack Of 2",
+
+oldPrice: "570",
+newPrice: "399",
+discount: "30% Off!",
+category: "Face Wash",
+rating: "4.6",
+},
+{
+// 23
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/4/7/4710032517839.jpeg",
+  "https://images-static.nykaa.com/media/catalog/product/c/d/cd0fb03nyneutrogena_acert.jpg",
+],
+name: "Neutrogena Hydro Boost Water Gel - Mini(15gm)",
+oldPrice: "440",
+newPrice: "370",
+discount: "10% Off!",
+category: "Moisturizers",
+rating: "4.4",
+},
+{
+// 24
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/5/f/5f05cc4e000334_1rev.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/5/f/5f05cc4the_body_shop_acert.jpg",
+],
+name: "The Body Shop Tea Tree Skin Clearing Facial Wash",
+oldPrice: "825",
+newPrice: "745",
+discount: "6% off!",
+category: "Face Wash",
+rating: "4.4",
+},
+{
+// 25
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__0_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__1_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__2_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__3_.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/2/4/24c5da18906084790955_npr__4_.jpg",
+],
+name: "Beardo De-Tan Facewash for Men, 100ml",
+oldPrice: "275",
+newPrice: "220",
+discount: "20% off!",
+category: "Face Wash",
+rating: "4.2",
+},
+
+{
+//   26
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/9/9/99a450e8901526211067_5.jpg",
+],
+name: "Garnier Men Acno Fight Pimple Clearing Whitening Cream",
+oldPrice: "165",
+newPrice: "124",
+discount: "25% off!",
+category: "Face Wash",
+rating: "4.4",
+},
+
+{
+//   27
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/d/1/d1d6058nykab00000077_5.jpg",
+],
+name: "Nykaa SKINRX 2% Ceramide Deep Nourish - Moisturising Face Serum For Dry, Sensitive, Damaged Skin",
+oldPrice: "900",
+newPrice: "790",
+discount: "10% off!",
+category: "Moisturizers",
+rating: "3",
+},
+{
+//  2 8
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/3/e/3e362538906005273420-new1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/e/3e362538906005273420-new2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/e/3e362538906005273420-new3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/e/3e362538906005273420-new4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/e/3e36253nycetaphil_acert.jpg",
+],
+name: "Cetaphil Gentle Skin Cleanser(1Ltr)",
+oldPrice: "1300",
+newPrice: "1140",
+discount: "15% off!",
+category: "Moisturizers",
+rating: "4.5",
+},
+{
+//  29
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/b/fbe559fnykab00000073_5.jpg",
+],
+name: "Nykaa SKINRX 20% Vitamin C Face Serum for Bright, Glowing & Radiant Skin with 1% Hyaluronic Acid",
+oldPrice: "1350",
+newPrice: "1199",
+discount: "13% off!",
+category: "Sun Screen",
+rating: "4.4",
+},
+{
+// 30
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8904245712297_5.jpg",
+],
+name: "Nykaa Skin Secrets Snail Sheet Mask(20ml)",
+oldPrice: "200",
+newPrice: "100",
+discount: "50% off!",
+category: "Sheet Mask",
+rating: "4.5",
+},
+{
+// 31
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/1/f1887d9nivea00000004_new5.jpg",
+],
+name: "Nivea Men Fresh Face Moisturizer Gel, Non Sticky & Light Moisturization (30ml)",
+oldPrice: "125",
+newPrice: "95",
+discount: "8% off!",
+category: "Moisturizer",
+rating: "4.4",
+},
+{
+// 32
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901012185292.1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901012185292.2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901012185292.3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901012185292.4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8901012185292.5.jpg",
+],
+name: "Neutrogena UltraSheer Dry Touch Sunblock SPF 50+(30ml)",
+oldPrice: "300",
+newPrice: "250",
+discount: "14% off",
+category: "Sun Screen",
+rating: "4.4",
+},
+{
+// 33
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/0/b/0b5528e4005900181305-1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/0/b/0b5528e4005900181305-2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/0/b/0b5528e4005900181305-3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/0/b/0b5528e4005900181305-4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/0/b/0b5528e4005900181305-5.jpg",
+],
+name: "NIVEA Men All-IN-1 Oil Control Face Wash with 10x Multi Effect(150ml)",
+oldPrice: "299",
+newPrice: "254",
+discount: "15% off!",
+category: "Face Wash",
+rating: "4.3",
+},
+{
+// 34
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8991380224303_white_activ_whitening_moisturing_fluid_50ml_i0.png",
+  "https://images-static.nykaa.com/media/catalog/product/l/o/loreal-1_6_1.jpg",
+],
+name: "L'Oreal Paris Men Expert White Activ Power 8 Brightening Serum Moisturizer SPF 26",
+oldPrice: "900",
+newPrice: "770",
+discount: "22% off",
+category: "Moisturizer",
+rating: "4.1",
+},
+{
+// 35
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/3/2/320d7a7minim00000008_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/2/320d7a7cruelty_free_only.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/2/320d7a7minim00000008_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/2/320d7a7minim00000008_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/3/2/320d7a7minim00000008_4.jpg",
+],
+name: "Minimalist 10% Vitamin C Face Serum for Skin",
+oldPrice: "800",
+newPrice: "699",
+discount: "11% off!",
+category: "Scun Screen",
+rating: "4.3",
+},
+{
+// 36
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/6/9/6970175253652_new_sak_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/6/9/6970175253652a_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/6/9/6970175253652a_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/6/9/6970175253652a_4.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/6/9/6970175253652a_5.jpg",
+],
+name: "Garnier Skin Naturals Sakura White Serum Sheet Mask Super Hydrating Pinkish Glow Tissue Mask",
+oldPrice: "150",
+newPrice: "99",
+discount: "30% off!",
+category: "Sun Screen",
+rating: "4.4",
+},
+{
+// 37
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/7/0/7003036.jpg",
+],
+name: "Himalaya Men Face & Beard Wash (40ml)",
+oldPrice: "95",
+newPrice: "84",
+discount: "12% off",
+category: "Face Wash",
+rating: "4.4",
+},
+{
+// 38
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/f/8/f8047a7minim00000014_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/8/f8047a7cruelty_free_only.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/8/f8047a7minim00000014_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/8/f8047a7minim00000014_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/f/8/f8047a7minim00000014_4.jpg",
+],
+name: "Minimalist Pha 3% Alcohol Free Biotic Face Toner For Pore Tightening",
+
+oldPrice: "500",
+newPrice: "400",
+discount: "20% off!",
+category: "Sun Screen",
+rating: "4.3",
+},
+{
+// 39
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8907367004448_1.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8907367004448_2.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8907367004448_3.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/8/9/8907367004448_5.jpg",
+],
+name: "The Man Company Essencia Shea Butter & Vitamin E Daily Moisturizing Cream",
+oldPrice: "349",
+newPrice: "276",
+discount: "21% off",
+category: "Moisturizer",
+rating: "4.4",
+},
+{
+// 40
+img1: [
+  "https://images-static.nykaa.com/media/catalog/product/5/8/585bcc4e000756_1rev.jpg",
+  "https://images-static.nykaa.com/media/catalog/product/5/8/585bcc4the_body_shop_acert.jpg",
+],
+name: "The Body Shop Vitamin C Glow Boosting Moisturiser",
+oldPrice: "2500",
+newPrice: "2095",
+discount: "13% off!",
+category: "Moisturiser",
+rating: "4.2",
+},
+];
+
+let product_data = JSON.parse(localStorage.getItem("productDetails"));
+console.log(product_data)
+displayProducts(product_data);
+localStorage.setItem("productDetails",JSON.stringify(productData))
+
+
+function displayProducts(product_data) {
+containerP.innerHTML = null;
+   console.log(product_data);
+
+   product_data.forEach((item) => {
+
+   let prod_div = document.createElement("div");
+   prod_div.setAttribute("id", "productChildDiv")
+   prod_div.addEventListener("click",function(){
+       localStorage.setItem("Productdata",JSON.stringify(item))
+       window.open("iproduct.html")
+   })
+
+   let p_heading = document.createElement("h4");
+   p_heading.setAttribute("class", "productTexts")
+   p_heading.innerText = `FEATURED`;
+   p_heading.style.marginLeft = "10px";
+   p_heading.style.color = "#003243";
+
+   let img = document.createElement("img");
+   img.setAttribute("src", item.img1[0]);
+   img.style.height = "250px";
+   img.style.width = "250px";
+   img.style.marginLeft = "25px";
+
+   let prod_name = document.createElement("p");
+   prod_name.setAttribute("class", "productTexts")
+   prod_name.innerText = item.name;
+   prod_name.style.textAlign = "center"
+
+
+   let mrp_div = document.createElement("div");
+   mrp_div.setAttribute("id", "mrp_div");
+
+   let mrp = document.createElement("p");
+   mrp.setAttribute("class", "productTexts")
+   mrp.innerText = `MRP:`;
+   mrp.style.marginTop = "16px";
+   mrp.style.color = "silver";
+
+
+   let p_old_price = document.createElement("p");
+   p_old_price.setAttribute("class", "productTexts");
+   p_old_price.style.textDecoration = "line-through";
+    p_old_price.innerText = `₹${item.oldPrice}`;
+    p_old_price.style.color = "silver";
+   
+
+   let p_new_price = document.createElement("p");
+   p_new_price.setAttribute("class", "productTexts");
+    p_new_price.innerText = `₹${item.newPrice} |`;
+
+
+   let p_discount = document.createElement("discount");
+   p_discount.setAttribute("class", "productTexts");
+    p_discount.innerText = item.discount;
+    
+    p_discount.style.marginTop = "16px";
+
+
+   let rating_div = document.createElement("div");
+   rating_div.setAttribute("id", "rating_div");
+
+   
+  let star_rating1 = document.createElement("span");
+   star_rating1.setAttribute("class", "fa fa-star");
+
+   let star_rating2 = document.createElement("span");
+   star_rating2.setAttribute("class", "fa fa-star");
+
+   let star_rating3 = document.createElement("span");
+   star_rating3.setAttribute("class", "fa fa-star");
+
+   let star_rating4 = document.createElement("span");
+   star_rating4.setAttribute("class", "fa fa-star");
+
+   let star_rating5 = document.createElement("span");
+   star_rating5.setAttribute("class", "fa fa-star");
+
+   rating_div.append(star_rating1,star_rating2,star_rating3,star_rating4,star_rating5)
+
+// ADD TO BAG BUTTON SECTION //
+
+   let btn_div = document.createElement("div");
+   btn_div.setAttribute("id", "btn_div");
+
+   btn_div.addEventListener("mouseenter", () => {
+
+    btn_div.innerHTML = null;
+
+    let btn_addTobag = document.createElement("button");
+    btn_addTobag.setAttribute("id","btn_addTobag");
+    btn_addTobag.setAttribute("class", "productTexts");
+    btn_addTobag.textContent = "ADD TO BAG"
+    btn_div.append(btn_addTobag)
+
+   });
+   btn_div.addEventListener("mouseleave", () => {
+       btn_div.innerHTML = null;
+   });
+
+    // FINISHED ADD TO BAG BUTTON SECTION //
+
+   if (item.rating > 4.5) {
+    p_heading.innerText = `BESTSELLER`;
+   } else {
+    p_heading.innerText = `FEATURED`;
+   }
+
+   mrp_div.append(mrp,p_old_price, p_new_price, p_discount);
+
+   let show = Math.floor(Number(item.rating));
+
+   let star_spans = rating_div.childNodes;
+   for(let i = 0; i < show; i++) {
+
+    star_spans[i].setAttribute("id", "color_stars")
+   }
+   prod_div.append(p_heading, img, prod_name, mrp_div, rating_div, btn_div)
+   containerP.append(prod_div)
+   })
+}
+
+let a=document.querySelector("form").childNodes
+for(var b=1; b<a.length; b=b+2) {
+    let c=a[b].childNodes
+    let d=c[3]
+    d.addEventListener("click",function(){
+        document.getElementById("val").textContent=d.value
+        if(d.value=="Price : High to Low") {
+            document.getElementById("productsContDk").innerHTML=null;
+            productData.sort(function(a,b) {return b.newPrice-a.newPrice})
+            displayProducts(productData)
+        }
+        else if(d.value == "Price : Low to High") {
+            document.getElementById("productsContDk").innerHTML=null;
+            productData.sort(function(a,b) {return a.newPrice-b.newPrice})
+            displayProducts(productData)
+        }
+        else if(d.value == "Coustmer Top Rated") {
+            document.getElementById("productsContDk").innerHTML=null;
+            productData.sort(function(a,b) {return b.rating-a.rating})
+            displayProducts(productData)
+        }
+        else if(d.value == "Discount") {
+            document.getElementById("productsContDk").innerHTML=null;
+            productData.sort(function(a,b) {
+                // console.log(a.discount.split(" "))
+                let a1=a.discount.split(" ")
+                let a2=a1[0];
+                // console.log(a2)
+                let a3=a2.split("")
+                
+                a3.pop()
+                // console.log(a3)
+                let a4=a3.join("")
+
+                let b1=b.discount.split(" ")
+                let b2=b1[0];
+                let b3=b2.split("")
+                b3.pop()
+                let b4=b3.join("")
+                console.log(b,a)
+                return b4-a4
+                
+           
+            })
+            displayProducts(productData)
+        }
+
+        else if(d.value == "Name") {
+            document.getElementById("productsContDk").innerHTML=null;
+            productData.sort(function(a,b) {
+                if(a.name[0]>b.name[0]) return 1
+                if(a.name[0]<b.name[0]) return -1
+            })
+            displayProducts(productData)
+        }
+        else {
+            document.getElementById("productsContDk").innerHTML=null;
+            productData.sort(function(a,b) {
+                if(a.name[0]>b.name[0]) return -1
+                if(a.name[0]<b.name[0]) return 1
+            })
+            displayProducts(productData)
+        }
+        // console.log(d.value)
+    })
+    // console.log(d.checked)
+}
+
+// for(var i=0; i<a.length; i++) {
+//     if(a[i].isChecked==true) console.log(a[i])
+// }
+
+
+</script>
+<script src="slider.js"></script>
