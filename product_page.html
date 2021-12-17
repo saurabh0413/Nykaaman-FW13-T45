@@ -8,7 +8,8 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="slider.css">
-
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/8d9bddce50.js" crossorigin="anonymous"></script>
     <style>
         body{
             background-color: rgb(235,235,235);
@@ -80,8 +81,8 @@
             min-width: 170px;
             display: flex;
             flex-direction: column;
-            position: -webkit-sticky; 
-            position: sticky;
+            /* position: -webkit-sticky; 
+            position: sticky; */
             top: 0; 
             left: 94px;
         }
@@ -174,6 +175,12 @@
         #arrowdiv h4{
             margin-left: 5%;
         }
+        .tr{
+            float: right;
+            margin-right: 2%;
+        }
+        
+     
   
      
 
@@ -309,20 +316,24 @@
                 <form class="up" id="form1">
                 
                 <div>
+                    <input type="checkbox" id="scales" name="scales" value="Facewash"/>
                 <label for="scales">Facewash</label>
-                <input type="checkbox" id="scales" name="scales" value="Facewash"/>
+                
+                
                 
                 </div>
 
                 <div>
-                 <label for="scales">Bodywash</label>
+                
                 <input type="checkbox" id="scales" name="scales" value="Bodywash"/>
+                <label for="scales">Bodywash</label>
               
                 </div>
 
                 <div>
-                    <label for="scales">Serum</label>
+                   
                 <input type="checkbox" id="scales" name="scales" value="Serum"/>
+                <label for="scales">Serum</label>
               
                 </div>
                 </form> 
@@ -344,9 +355,10 @@
             <div id="flexx2">
                 <form class="up" id="form2">
                 
-                <div>
-                    <label for="scales">Nyaka naturals</label>
-                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                <div >
+                    <div style="display: inline-block;">
+                    <label for="scales">Nyaka naturals</label></div>
+                <div class="tr" style="display: inline-block;"><input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/></div>
                 
                 </div>
 
@@ -775,7 +787,7 @@
                 
                 <div>
                 <label for="scales">Aloo-veera</label>
-                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals"/>
+                <input type="checkbox" id="scales" name="scales" value="Nyaka naturals" id="lastc"/>
                 
                 </div>
 
@@ -852,16 +864,25 @@
         
 
     </div>
+
+    
     
 </div>  
 
 <!-- Mapped div -->
 <div id="productsContDk"></div>
 </div>
+
+<div id="fotter"></div>
+
 </div>
 </body>
 </html>
-<script>
+<script type="module">
+
+    import footer from "/footer.js"
+
+    document.getElementById("fotter").innerHTML = footer()
     // console.log(document.getElementById("sizecheck3").value)
 
     // Selection option
@@ -1555,8 +1576,8 @@ containerP.innerHTML = null;
    let prod_div = document.createElement("div");
    prod_div.setAttribute("id", "productChildDiv")
    prod_div.addEventListener("click",function(){
-       localStorage.setItem("Productdata",JSON.stringify(item))
-       window.open("iproduct.html")
+       localStorage.setItem("unq_productDetails",JSON.stringify(item))
+       window.open("unqProduct.html")
    })
 
    let p_heading = document.createElement("h4");
