@@ -1,8 +1,17 @@
 document.getElementById("GoToLogin").addEventListener("click",()=>{
     window.location.href="account.html"
 })
-document.getElementById("openCart").addEventListener("click",()=>{
-    window.location.href="cart.html"
+// document.getElementById("imgSetter").addEventListener("click",()=>{
+//   console.log("yes")
+//   window.location.href="index.html"
+// })
+function clickedInput()
+{
+  document.getElementById("seach-dropdown").style.visibility="visible"
+}
+
+document.getElementById("header1Data").addEventListener("click",()=>{
+  document.getElementById("seach-dropdown").style.visibility="hidden"
 })
 
 //main slider js
@@ -36,7 +45,7 @@ function nextSlide() {
 setInterval(function () {
   if (count == 6) {
     count = 0;
-    document.getElementById("aaja").style.left = "0px";
+    document.getElementById("aaja1").style.left = 0;
     prevSlide();
   } else {
     nextSlide();
@@ -159,7 +168,7 @@ let sliderList3 = document.querySelector("#sf3-Slider");
   setInterval(function () {
   if (count3 == 2) {
     count3 = 0;
-    document.getElementById("aaja3").style.left = "0px";
+    document.getElementById("aaja3").style.left = 0;
     SF3prevSlide();
   } else {
     SF3nextSlide();
@@ -208,3 +217,55 @@ setInterval(function () {
   }, 2000);
 
 //durgesh slider ended
+
+document.getElementById("openCart").addEventListener("click",()=>{
+    // window.location.href="cart.html"
+    hide();
+})
+
+//button 
+mybutton = document.getElementById("myBtnSF");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+var scrollBtn = document.querySelector("#scrollTop");
+scrollBtn.addEventListener("click", function () {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+
+function userShowDown(){
+  let userShow = JSON.parse(localStorage.getItem("UserDetails")) ||[]
+  let userName =  document.getElementById("getn")
+  console.log(userShow)
+    if(userShow.length>0){
+      userName.innerText=`${userShow[userShow.length-1].name}`
+      document.getElementById("GoToLogin").addEventListener("mouseover",()=>{
+        document.getElementById("accountdropdown").style.visibility="visible"
+      })
+      document.getElementById("accountdropdown").addEventListener("mouseover",()=>{
+        document.getElementById("accountdropdown").style.visibility="visible"
+      })
+      document.getElementById("accountdropdown").addEventListener("mouseout",()=>{
+        document.getElementById("accountdropdown").style.visibility="hidden"
+      })
+      // document.getElementById("GoToLogin").addEventListener("mouseleave",()=>{
+      //   document.getElementById("accountdropdown").style.visibility="hidden"
+      // })
+
+
+    }
+    else{
+      userName.innerText="Account"
+    }
+
+}
+userShowDown()
