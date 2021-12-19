@@ -257,9 +257,9 @@ function userShowDown(){
       document.getElementById("accountdropdown").addEventListener("mouseout",()=>{
         document.getElementById("accountdropdown").style.visibility="hidden"
       })
-      document.getElementById("GoToLogin").addEventListener("mouseleave",()=>{
-        document.getElementById("accountdropdown").style.visibility="hidden"
-      })
+      // document.getElementById("GoToLogin").addEventListener("mouseleave",()=>{
+      //   document.getElementById("accountdropdown").style.visibility="hidden"
+      // })
 
 
     }
